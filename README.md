@@ -1,10 +1,10 @@
 # AUDUSD 1h OHLCV Forex Historical Data — Free Sample
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Dataset rows](https://img.shields.io/badge/full_dataset-87_314_rows-blue)](https://getdata.finance/datasets/audusd) [![Updated](https://img.shields.io/badge/weekly_update-every_Saturday_8am_UTC-green)](https://getdata.finance) [![Full data on getdata.finance](https://img.shields.io/badge/download-getdata.finance-orange)](https://getdata.finance/datasets/audusd)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Dataset rows](https://img.shields.io/badge/full_dataset-87_848_rows-blue)](https://getdata.finance/datasets/audusd) [![Updated](https://img.shields.io/badge/weekly_update-every_Saturday_8am_UTC-green)](https://getdata.finance) [![Full data on getdata.finance](https://img.shields.io/badge/download-getdata.finance-orange)](https://getdata.finance/datasets/audusd)
 
 ### -> [**Download the full AUDUSD dataset on getdata.finance**](https://getdata.finance/datasets/audusd)
 
-**AUDUSD 1h OHLCV forex historical data** — ultra high-quality 1h OHLCV for **AUDUSD**. 24/5 market coverage — Asia, Europe and US sessions with institutional-style FX candles. Clean `datetime, open, high, low, close, volume` CSV for backtesting, algorithmic trading and quantitative research.
+**AUDUSD 1h OHLCV forex historical data** — ultra high-quality 1h OHLCV for **Australian Dollar / US Dollar**. Clean `time, open, high, low, close, volume` CSV for backtesting, algorithmic trading and quantitative research.
 
 ## Table of contents
 
@@ -21,14 +21,13 @@
 
 ## Why this dataset?
 
-- **Ultra high-quality 1h OHLCV** for **AUDUSD** (Forex)
-- **24/5 market coverage — Asia, Europe and US sessions with institutional-style FX candles**
-- **Clean CSV schema** — `datetime, open, high, low, close, volume` (no gaps in formatting)
-- **Free evaluation sample** on GitHub (`1h`) · **9 timeframes** on [getdata.finance](https://getdata.finance/datasets/audusd) · **87,314** `1m` rows in the full archive
+- **Ultra high-quality 1h OHLCV** for **Australian Dollar / US Dollar** (Forex)
+- **Clean CSV schema** — `time, open, high, low, close, volume` (no gaps in formatting)
+- **Free evaluation sample** on GitHub (`1h`) · **11 timeframes** on [getdata.finance](https://getdata.finance/datasets/audusd) · **87,848** `1h` rows in the full archive
 - Built for **backtesting**, **algorithmic trading** and **quantitative finance** workflows
 - **Weekly refresh** — [getdata.finance](https://getdata.finance) every **Saturday, 8am UTC+0**; GitHub `1h` sample updated in sync
 
-> **Sample on GitHub** · `AUDUSD_1h.csv` (3,120 rows, `2026-02-01` -> `2026-07-31`). **Full archive on [getdata.finance](https://getdata.finance/datasets/audusd)** — **87,314** `1m` rows (~6.91 MB), **9 timeframes** (1m · 3m · 5m · 15m · 30m · 1H · 12H · 3D · 1W), `2012-06-24` -> `2026-07-31`.
+> **Sample on GitHub** · `AUDUSD_1h.csv` (925 rows, `2026-07-09` -> `2026-09-02`, 94.63 KB). **Full archive on [getdata.finance](https://getdata.finance/datasets/audusd)** — **87,848** `1h` rows (full `1m`: 5,263,593), **11 timeframes**, `2012-06-24` -> `2026-09-02`.
 
 ## Download sample
 
@@ -44,22 +43,22 @@ Full archive & live chart on getdata.finance: **[https://getdata.finance/dataset
 
 | | **Sample (this repo)** | **Full dataset ([getdata.finance](https://getdata.finance/datasets/audusd))** |
 |---|--:|---|
-| Instrument | AUDUSD · Forex | AUDUSD · Forex |
-| Timeframes | `1h` (sample) | **9** — 1m · 3m · 5m · 15m · 30m · 1H · 12H · 3D · 1W |
-| 1m rows | 3,120 | **87,314** |
-| Size | 0.32 MB | ~6.91 MB |
-| Period | `2026-02-01` -> `2026-07-31` | `2012-06-24` -> `2026-07-31` |
+| Instrument | Australian Dollar / US Dollar · Forex | Australian Dollar / US Dollar · Forex |
+| Timeframes | `1h` (sample) | **11** — 1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W |
+| 1h rows | 925 | **87,848** |
+| Size | 94.63 KB | full ZIP on [getdata.finance](https://getdata.finance/datasets/audusd) |
+| Period | `2026-07-09` -> `2026-09-02` | `2012-06-24` -> `2026-09-02` |
 | File | `AUDUSD_1h.csv` | ZIP on [getdata.finance](https://getdata.finance/datasets/audusd) |
 | Coverage report | — | [AUDUSD coverage](https://getdata.finance/coverage/audusd) |
 | Updates | Weekly (Saturday, 8am UTC+0) — GitHub sample | Weekly (Saturday, 8am UTC+0) — all timeframes |
 
 ## Timeframes on GetData
 
-This GitHub repository ships a **`1h` evaluation sample** only. On **[getdata.finance](https://getdata.finance/datasets/audusd)**, each full asset archive is delivered as a ZIP with **9 gap-free OHLCV timeframes** (one CSV per timeframe):
+This GitHub repository ships a **`1h` evaluation sample** only. On **[getdata.finance](https://getdata.finance/datasets/audusd)**, each full asset archive is delivered as a ZIP with **11 gap-free OHLCV timeframes** (one CSV per timeframe):
 
-**1m** · **3m** · **5m** · **15m** · **30m** · **1H** · **12H** · **3D** · **1W**
+**1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W**
 
-GitHub = `1h` sample · [getdata.finance](https://getdata.finance/datasets/audusd) = all **9** timeframes above for the same instrument.
+GitHub = `1h` sample · [getdata.finance](https://getdata.finance/datasets/audusd) = all **11** timeframes above for the same instrument.
 
 ## Weekly updates
 
@@ -74,29 +73,29 @@ First and latest rows from the GitHub sample **`AUDUSD_1h.csv`**:
 
 **First rows**
 
-| datetime | open | high | low | close | volume |
+| time | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
-| 2026-02-01T22:00:00+00:00 | 0.70068 | 0.70152 | 0.70029 | 0.70032 | 2993.3552325117 |
-| 2026-02-01T23:00:00+00:00 | 0.70032 | 0.70161 | 0.69841 | 0.70072 | 18890 |
-| 2026-02-02T00:00:00+00:00 | 0.70072 | 0.70343 | 0.70071 | 0.70293 | 19559 |
-| 2026-02-02T01:00:00+00:00 | 0.70293 | 0.70298 | 0.70049 | 0.70278 | 23702 |
-| 2026-02-02T02:00:00+00:00 | 0.70278 | 0.70325 | 0.70076 | 0.70079 | 16144 |
+| 2026-07-09T14:00:00+00:00 | 0.70815 | 0.70852 | 0.70767 | 0.70785 | 10636 |
+| 2026-07-09T15:00:00+00:00 | 0.70785 | 0.70867 | 0.70766 | 0.7084 | 7644 |
+| 2026-07-09T16:00:00+00:00 | 0.7084 | 0.70875 | 0.70811 | 0.70816 | 4699 |
+| 2026-07-09T17:00:00+00:00 | 0.70816 | 0.70864 | 0.70812 | 0.70855 | 3893 |
+| 2026-07-09T18:00:00+00:00 | 0.70855 | 0.70861 | 0.70817 | 0.70834 | 3241 |
 
 **Last rows**
 
-| datetime | open | high | low | close | volume |
+| time | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
-| 2026-07-31T16:00:00+00:00 | 0.71649 | 0.71694 | 0.71628 | 0.71663 | 7415 |
-| 2026-07-31T17:00:00+00:00 | 0.71663 | 0.71792 | 0.71662 | 0.71757 | 10490 |
-| 2026-07-31T18:00:00+00:00 | 0.71757 | 0.71781 | 0.71736 | 0.71777 | 5494 |
-| 2026-07-31T19:00:00+00:00 | 0.71777 | 0.71827 | 0.71762 | 0.71762 | 4438 |
-| 2026-07-31T20:00:00+00:00 | 0.71762 | 0.71828 | 0.71656 | 0.71662 | 5828 |
+| 2026-09-01T22:00:00+00:00 | 0.7144 | 0.71478 | 0.7144 | 0.7147 | 1447 |
+| 2026-09-01T23:00:00+00:00 | 0.7147 | 0.71474 | 0.71447 | 0.71453 | 1528 |
+| 2026-09-02T00:00:00+00:00 | 0.71453 | 0.71472 | 0.71404 | 0.71409 | 8485 |
+| 2026-09-02T01:00:00+00:00 | 0.71409 | 0.71527 | 0.71389 | 0.71481 | 11248 |
+| 2026-09-02T02:00:00+00:00 | 0.71481 | 0.71487 | 0.71456 | 0.71456 | 180 |
 
 ## Schema
 
 | Column | Description |
 | --- | --- |
-| `datetime` | Bar open timestamp (UTC, ISO-8601). |
+| `time` | Bar open timestamp (UTC, ISO-8601). |
 | `open` | Opening price of the candlestick bar. |
 | `high` | Highest price during the bar. |
 | `low` | Lowest price during the bar. |
@@ -104,7 +103,7 @@ First and latest rows from the GitHub sample **`AUDUSD_1h.csv`**:
 | `volume` | Tick volume (number of price updates) during the bar. |
 
 ```text
-datetime,open,high,low,close,volume
+time,open,high,low,close,volume
 ```
 
 ## Code examples
@@ -114,11 +113,9 @@ datetime,open,high,low,close,volume
 ```python
 import pandas as pd
 
-df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['datetime'])
-df.set_index('datetime', inplace=True)
+df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['time'])
+df.set_index('time', inplace=True)
 print(df.describe())
-print(df.resample('1h').agg({'open': 'first', 'high': 'max',
-                              'low': 'min', 'close': 'last', 'volume': 'sum'}).head())
 ```
 
 ### backtrader
@@ -127,8 +124,8 @@ print(df.resample('1h').agg({'open': 'first', 'high': 'max',
 import backtrader as bt
 import pandas as pd
 
-df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['datetime'])
-df.set_index('datetime', inplace=True)
+df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['time'])
+df.set_index('time', inplace=True)
 
 class PandasData(bt.feeds.PandasData):
     params = (('datetime', None), ('open', 'open'), ('high', 'high'),
@@ -146,20 +143,20 @@ cerebro.adddata(PandasData(dataname=df))
 import pandas as pd
 import vectorbt as vbt
 
-df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['datetime'])
-close = df.set_index('datetime')['close']
+df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['time'])
+close = df.set_index('time')['close']
 fast, slow = vbt.MA.run(close, 10), vbt.MA.run(close, 50)
 entries = fast.ma_crossed_above(slow)
 exits = fast.ma_crossed_below(slow)
-pf = vbt.Portfolio.from_signals(close, entries, exits, init_cash=10_000, freq='1min')
+pf = vbt.Portfolio.from_signals(close, entries, exits, init_cash=10_000, freq='1h')
 print(pf.stats())
 ```
 
 ## Download full data
 
-The complete **AUDUSD** archive on **[getdata.finance](https://getdata.finance/datasets/audusd)** includes **9 OHLCV timeframes** (1m · 3m · 5m · 15m · 30m · 1H · 12H · 3D · 1W) — **87,314** rows at `1m`, plus all other timeframes in the same ZIP.
+The complete **AUDUSD** archive on **[getdata.finance](https://getdata.finance/datasets/audusd)** includes **11 OHLCV timeframes** (1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W) — **87,848** rows at `1h`, plus all other timeframes in the same ZIP.
 
 **[-> Get the full AUDUSD dataset on getdata.finance](https://getdata.finance/datasets/audusd)**
 
 ---
-*GetData · AUDUSD 1h OHLCV sample on GitHub · Full historical data on [getdata.finance](https://getdata.finance/datasets/audusd) · 2026-08-05 UTC*
+*GetData · AUDUSD 1h OHLCV sample on GitHub · Full historical data on [getdata.finance](https://getdata.finance/datasets/audusd)*
