@@ -4,7 +4,7 @@
 
 ### -> [**Download the full AUDUSD dataset on getdata.finance**](https://getdata.finance/datasets/audusd)
 
-**AUDUSD 1h OHLCV forex historical data** — ultra high-quality 1h OHLCV for **Australian Dollar / US Dollar**. Clean `time, open, high, low, close, volume` CSV for backtesting, algorithmic trading and quantitative research.
+**AUDUSD 1h OHLCV forex historical data** — ultra high-quality 1h OHLCV for **Australian Dollar / US Dollar**. Clean `datetime, open, high, low, close, volume` CSV for backtesting, algorithmic trading and quantitative research.
 
 ## Table of contents
 
@@ -22,12 +22,12 @@
 ## Why this dataset?
 
 - **Ultra high-quality 1h OHLCV** for **Australian Dollar / US Dollar** (Forex)
-- **Clean CSV schema** — `time, open, high, low, close, volume` (no gaps in formatting)
+- **Clean CSV schema** — `datetime, open, high, low, close, volume` (no gaps in formatting)
 - **Free evaluation sample** on GitHub (`1h`) · **11 timeframes** on [getdata.finance](https://getdata.finance/datasets/audusd) · **87,848** `1h` rows in the full archive
 - Built for **backtesting**, **algorithmic trading** and **quantitative finance** workflows
 - **Weekly refresh** — [getdata.finance](https://getdata.finance) every **Saturday, 8am UTC+0**; GitHub `1h` sample updated in sync
 
-> **Sample on GitHub** · `AUDUSD_1h.csv` (925 rows, `2026-07-09` -> `2026-09-02`, 94.63 KB). **Full archive on [getdata.finance](https://getdata.finance/datasets/audusd)** — **87,848** `1h` rows (full `1m`: 5,263,593), **11 timeframes**, `2012-06-24` -> `2026-09-02`.
+> **Sample on GitHub** · `AUDUSD_1h.csv` (925 rows, `2026-07-09` -> `2026-09-02`, 94.64 KB). **Full archive on [getdata.finance](https://getdata.finance/datasets/audusd)** — **87,848** `1h` rows (full `1m`: 5,263,593), **11 timeframes**, `2012-06-24` -> `2026-09-02`.
 
 ## Download sample
 
@@ -46,7 +46,7 @@ Full archive & live chart on getdata.finance: **[https://getdata.finance/dataset
 | Instrument | Australian Dollar / US Dollar · Forex | Australian Dollar / US Dollar · Forex |
 | Timeframes | `1h` (sample) | **11** — 1m · 3m · 5m · 15m · 30m · 1H · 4H · 12H · 1D · 3D · 1W |
 | 1h rows | 925 | **87,848** |
-| Size | 94.63 KB | full ZIP on [getdata.finance](https://getdata.finance/datasets/audusd) |
+| Size | 94.64 KB | full ZIP on [getdata.finance](https://getdata.finance/datasets/audusd) |
 | Period | `2026-07-09` -> `2026-09-02` | `2012-06-24` -> `2026-09-02` |
 | File | `AUDUSD_1h.csv` | ZIP on [getdata.finance](https://getdata.finance/datasets/audusd) |
 | Coverage report | — | [AUDUSD coverage](https://getdata.finance/coverage/audusd) |
@@ -73,7 +73,7 @@ First and latest rows from the GitHub sample **`AUDUSD_1h.csv`**:
 
 **First rows**
 
-| time | open | high | low | close | volume |
+| datetime | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
 | 2026-07-09T14:00:00+00:00 | 0.70815 | 0.70852 | 0.70767 | 0.70785 | 10636 |
 | 2026-07-09T15:00:00+00:00 | 0.70785 | 0.70867 | 0.70766 | 0.7084 | 7644 |
@@ -83,7 +83,7 @@ First and latest rows from the GitHub sample **`AUDUSD_1h.csv`**:
 
 **Last rows**
 
-| time | open | high | low | close | volume |
+| datetime | open | high | low | close | volume |
 | --- | --- | --- | --- | --- | --- |
 | 2026-09-01T22:00:00+00:00 | 0.7144 | 0.71478 | 0.7144 | 0.7147 | 1447 |
 | 2026-09-01T23:00:00+00:00 | 0.7147 | 0.71474 | 0.71447 | 0.71453 | 1528 |
@@ -95,7 +95,7 @@ First and latest rows from the GitHub sample **`AUDUSD_1h.csv`**:
 
 | Column | Description |
 | --- | --- |
-| `time` | Bar open timestamp (UTC, ISO-8601). |
+| `datetime` | Bar open timestamp (UTC, ISO-8601). |
 | `open` | Opening price of the candlestick bar. |
 | `high` | Highest price during the bar. |
 | `low` | Lowest price during the bar. |
@@ -103,7 +103,7 @@ First and latest rows from the GitHub sample **`AUDUSD_1h.csv`**:
 | `volume` | Tick volume (number of price updates) during the bar. |
 
 ```text
-time,open,high,low,close,volume
+datetime,open,high,low,close,volume
 ```
 
 ## Code examples
@@ -113,8 +113,8 @@ time,open,high,low,close,volume
 ```python
 import pandas as pd
 
-df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['time'])
-df.set_index('time', inplace=True)
+df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['datetime'])
+df.set_index('datetime', inplace=True)
 print(df.describe())
 ```
 
@@ -124,8 +124,8 @@ print(df.describe())
 import backtrader as bt
 import pandas as pd
 
-df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['time'])
-df.set_index('time', inplace=True)
+df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['datetime'])
+df.set_index('datetime', inplace=True)
 
 class PandasData(bt.feeds.PandasData):
     params = (('datetime', None), ('open', 'open'), ('high', 'high'),
@@ -143,8 +143,8 @@ cerebro.adddata(PandasData(dataname=df))
 import pandas as pd
 import vectorbt as vbt
 
-df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['time'])
-close = df.set_index('time')['close']
+df = pd.read_csv('AUDUSD_1h.csv', parse_dates=['datetime'])
+close = df.set_index('datetime')['close']
 fast, slow = vbt.MA.run(close, 10), vbt.MA.run(close, 50)
 entries = fast.ma_crossed_above(slow)
 exits = fast.ma_crossed_below(slow)
